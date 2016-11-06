@@ -7,10 +7,8 @@ export function setup(helper) {
     stop: '[/yuml]',
     rawContents: true,
     emitter(contents) {
-      var uri = "http://yuml.me/diagram/scruffy/class/" + encodeURIComponent(blockContents.replace(/\n/g, ","));
+      var uri = "http://yuml.me/diagram/scruffy/class/" + encodeURIComponent(contents.replace(/\n/g, ","));
       return "<img src=\"" + uri + "\" />";
-
-      return contents;
     }
   });
 }
