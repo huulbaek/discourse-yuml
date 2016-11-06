@@ -1,4 +1,5 @@
 (function() {
+    if (Discourse.dialect_deprecated) { return; }
 
 Discourse.Dialect.inlineBetween({
     start: '[yuml]',
